@@ -10,7 +10,7 @@
         }
         public double AreaofTheFigure()
         {
-            return Math.PI * Math.Pow(Radius, 2);           
+            return Area = Math.PI * Math.Pow(Radius, 2);           
         }
     }
 }
