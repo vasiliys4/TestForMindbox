@@ -1,9 +1,8 @@
 ﻿namespace TestForMindbox
 {
-    class Circle : ShapeManager
+    public class Circle : ShapeManager
     {
-        double Radius;
-
+        public double Radius;
         public Circle(double r) 
         {
             Radius= r;
