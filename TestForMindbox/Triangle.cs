@@ -6,26 +6,29 @@ using System.Threading.Tasks;
 
 namespace TestForMindbox
 {
-    class Triangle : IShapeManager
+    class Triangle : ShapeManager
     {
-        //double FirstSide = double.Parse(Console.ReadLine());
-        //double SecondSide = double.Parse(Console.ReadLine());
-        //double ThirdSide = double.Parse(Console.ReadLine());
+        double FirstSide;
+        double SecondSide;
+        double ThirdSide;
 
-        public double AreaofTheFigure(double[] SideLength)
+        public Triangle(double a, double b, double c)
         {
-            //SideLength = new double[3] {FirstSide, SecondSide, ThirdSide};
-            double HalfMeter;
-            HalfMeter = (SideLength[0] + SideLength[1] + SideLength[2]) / 2;
-            return Math.Sqrt(HalfMeter * ((HalfMeter - SideLength[0]) * (HalfMeter - SideLength[1]) * (HalfMeter - SideLength[2])));
+            (FirstSide, SecondSide, ThirdSide) = (a, b, c);
         }
 
-        public bool ChekInRectangular(double[] SideLength)
+        public override double AreaofTheFigure()
         {
-            //SideLength = new double[3] {FirstSide, SecondSide ,ThirdSide};
+            double HalfMeter;
+            HalfMeter = (FirstSide + SecondSide + ThirdSide) / 2;
+            return Area = Math.Sqrt(HalfMeter * ((HalfMeter - FirstSide) * (HalfMeter - SecondSide) * (HalfMeter - ThirdSide)));
+        }
+
+        public bool ChekInRectangular()
+        {
+            double[] SideLength = new double[3] {FirstSide,SecondSide,ThirdSide};
             Array.Sort(SideLength);
             return Math.Pow(SideLength[0], 2) + Math.Pow(SideLength[1], 2) == Math.Pow(SideLength[2], 2);
-            //SquareTriangle = FirstSide * SecondSide / 2;
         }
     }
 }
