@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestForMindbox
 {
-    class Triangle : ShapeManager
+    class Triangle : IShapeManager
     {
         //double FirstSide = double.Parse(Console.ReadLine());
         //double SecondSide = double.Parse(Console.ReadLine());

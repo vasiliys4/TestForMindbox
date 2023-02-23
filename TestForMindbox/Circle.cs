@@ -2,9 +2,15 @@
 {
     class Circle : ShapeManager
     {
-        public double AreaofTheFigure(double[] SideLength)
+        double Radius;
+
+        public Circle(double r) 
         {
-            return Math.PI * Math.Pow(SideLength[0], 2);           
+            Radius= r;
+        }
+        public double AreaofTheFigure()
+        {
+            return Math.PI * Math.Pow(Radius, 2);           
         }
     }
 }
