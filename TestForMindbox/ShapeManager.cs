@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestForMindbox
 {
-    public interface IShapeManager
+    public abstract class ShapeManager
     {
-        public double AreaofTheFigure(double[] SideLength);
+        public double Area { get; set; }
+        public virtual double AreaofTheFigure() { return Area; }
     }
 }
