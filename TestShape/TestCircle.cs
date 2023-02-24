@@ -5,7 +5,7 @@ namespace TestShape
     public class TestCircle
     {
         [Fact]
-        public void IsCircleAreaCorrect()
+        public void IsCircleArea()
         {
             var circle1 = new Circle(1);
             var result1 = circle1.AreaofTheFigure();

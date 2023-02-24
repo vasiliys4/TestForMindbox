@@ -24,9 +24,9 @@ namespace TestForMindbox
             return Area = Math.Sqrt(HalfMeter * ((HalfMeter - FirstSide) * (HalfMeter - SecondSide) * (HalfMeter - ThirdSide)));
         }
 
-        public bool ChekInRectangular(double a, double b, double c)
+        public bool ChekInRectangular()
         {
-            double[] SideLength = new double[3] {a, b, c};
+            double[] SideLength = new double[3] {FirstSide ,SecondSide ,ThirdSide};
             Array.Sort(SideLength);
             return Math.Pow(SideLength[0], 2) + Math.Pow(SideLength[1], 2) == Math.Pow(SideLength[2], 2);
         }

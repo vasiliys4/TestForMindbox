@@ -10,7 +10,7 @@ namespace TestShape
     public class TestTriangle
     {
         [Fact]
-        public void IsTriangleAreaCorrect()
+        public void IsTriangleArea()
         {
             var triangle1 = new Triangle(3, 4, 5);
             var result1 = triangle1.AreaofTheFigure();
@@ -18,6 +18,16 @@ namespace TestShape
             var triangle2 = new Triangle(3, 3, 3);
             var result2 = triangle2.AreaofTheFigure();
             Assert.Equal(3.897114317029974, result2);
+        }
+        [Fact]
+        public void IsTriangleRectangular()
+        {
+            var triangle1 = new Triangle(3, 4, 5);
+            var result1 = triangle1.ChekInRectangular();
+            Assert.Equal(true, result1);
+            var triangle2 = new Triangle(3, 3, 3);
+            var result2 = triangle2.ChekInRectangular();
+            Assert.Equal(false, result2);
         }
     }
 }
