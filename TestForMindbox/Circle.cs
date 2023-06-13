@@ -2,12 +2,12 @@
 {
     public class Circle : ShapeManager
     {
-        public double Radius;
-        public Circle(double r) 
+        public double Radius { get; set; }
+        public Circle(double radius) 
         {
-            Radius= r;
+            Radius= radius;
         }
-        public double AreaofTheFigure()
+        public override double CalculateArea()
         {
             return Area = Math.PI * Math.Pow(Radius, 2);           
         }

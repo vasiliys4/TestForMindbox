@@ -17,14 +17,14 @@ namespace TestForMindbox
             (FirstSide, SecondSide, ThirdSide) = (a, b, c);
         }
 
-        public override double AreaofTheFigure()
+        public override double CalculateArea()
         {
             double HalfMeter;
             HalfMeter = (FirstSide + SecondSide + ThirdSide) / 2;
             return Area = Math.Sqrt(HalfMeter * ((HalfMeter - FirstSide) * (HalfMeter - SecondSide) * (HalfMeter - ThirdSide)));
         }
 
-        public bool ChekInRectangular()
+        public bool ChekRectangular()
         {
             double[] SideLength = new double[3] {FirstSide ,SecondSide ,ThirdSide};
             Array.Sort(SideLength);

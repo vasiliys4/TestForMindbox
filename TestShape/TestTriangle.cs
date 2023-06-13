@@ -23,10 +23,10 @@ namespace TestShape
         public void IsTriangleRectangular()
         {
             var triangle1 = new Triangle(3, 4, 5);
-            var result1 = triangle1.ChekInRectangular();
+            var result1 = triangle1.ChekRectangular();
             Assert.Equal(true, result1);
             var triangle2 = new Triangle(3, 3, 3);
-            var result2 = triangle2.ChekInRectangular();
+            var result2 = triangle2.ChekRectangular();
             Assert.Equal(false, result2);
         }
     }

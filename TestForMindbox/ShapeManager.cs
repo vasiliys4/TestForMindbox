@@ -9,6 +9,9 @@ namespace TestForMindbox
     public abstract class ShapeManager
     {
         public double Area { get; set; }
-        public virtual double AreaofTheFigure() { return Area; }
+        public virtual double CalculateArea() 
+        { 
+            return Area; 
+        }
     }
 }
