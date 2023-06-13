@@ -15,6 +15,22 @@ namespace TestForMindbox
         public Triangle(double a, double b, double c)
         {
             (FirstSide, SecondSide, ThirdSide) = (a, b, c);
+            if ((FirstSide + SecondSide > ThirdSide) &&
+                (FirstSide + ThirdSide > SecondSide) &&
+                (SecondSide + ThirdSide > FirstSide) &&
+                FirstSide > 0 &&
+                SecondSide > 0 &&
+                ThirdSide > 0)
+            {
+                if (ChekRectangular())
+                {
+                    Console.WriteLine("Треугольник прямоугольный");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Треугольник не существует");
+            }
         }
 
         public override double CalculateArea()
